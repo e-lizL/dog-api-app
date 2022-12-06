@@ -1,44 +1,17 @@
-import React from "react";
-import styled from "styled-components";
-import Header from "./Header.svg";
-
-const HeaderWrapper = styled.div`
-  padding: 80px;
-  display: flex;
-  justify-content: center;
-`;
-
-const InnerContainer = styled.div`
-  width: 80%;
-  max-width: 900px;
-  margin: 0 auto;
-`;
-
-const OptionsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-`;
-
-const StyledSelect = styled.select``;
-
-const StyledButton = styled.button`
-  padding: 15px;
-  border: none;
-  border-radius: 12px;
-  font-size: 1rem;
-  &:hover,
-  &:active,
-  &:focus {
-    color: blue;
-  }
-`;
+import header from "./header.svg";
+import {
+  HeaderWrapper,
+  InnerContainer,
+  OptionsContainer,
+  StyledSelect,
+  StyledButton,
+} from "./AppStyles";
 
 function App() {
   return (
     <>
       <HeaderWrapper>
-        <img src={Header} alt="I love dogs" />
+        <img src={header} alt="I love dogs" />
       </HeaderWrapper>
       <InnerContainer>
         <OptionsContainer>
