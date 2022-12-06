@@ -14,8 +14,15 @@ const InnerContainer = styled.div`
 
 const OptionsContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 50px;
+  @media (min-width: 600px){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+  }
 `;
 
 const StyledSelect = styled.select``;
