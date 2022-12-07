@@ -1,27 +1,27 @@
 import styled from 'styled-components';
 
-const HeaderWrapper = styled.div`
+const StyledHeaderWrapper = styled.div`
   padding: 80px;
   display: flex;
   justify-content: center;
 `;
 
-const InnerContainer = styled.div`
+const StyledInnerContainer = styled.div`
   width: 80%;
   max-width: 900px;
   margin: 0 auto;
 `;
 
-const OptionsContainer = styled.div`
+const StyledOptionsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 50px;
+  gap: 5vw;
   @media (min-width: 600px){
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 50px;
+    gap: 4vw;
   }
 `;
 
@@ -40,10 +40,19 @@ const StyledButton = styled.button`
   }
 `;
 
+const StyledSingleImageContainer = styled.div`
+width: 100px;
+height: 150px;
+margin: 80px auto;
+border: 10px solid #AC902C;
+border-radius: 8px;
+`;
+
 export {
-  HeaderWrapper,
-  InnerContainer,
-  OptionsContainer,
+  StyledHeaderWrapper,
+  StyledInnerContainer,
+  StyledOptionsContainer,
   StyledSelect,
-  StyledButton
+  StyledButton, 
+  StyledSingleImageContainer
 };
