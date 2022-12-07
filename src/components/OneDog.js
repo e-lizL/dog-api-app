@@ -1,4 +1,4 @@
-import axios, { AxiosHeaders } from "axios";
+import axios from "axios";
 import { useState, useEffect, useCallback } from "react";
 import {StyledSingleImageContainer  } from ".././AppStyles";
 
@@ -19,7 +19,7 @@ const OneDog = ({ breedChoice, showOneDog }) => {
     <>
       <StyledSingleImageContainer>
         {showOneDog &&
-        <img src={dog.message} alt="one dog" />
+        <img src={dog} alt="one dog" />
         }
       </StyledSingleImageContainer>
     </>

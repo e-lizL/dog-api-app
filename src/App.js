@@ -1,18 +1,28 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
 import Header from "./components/Header"
 import OneDog from "./components/OneDog"
+import Select from "./components/Select"
 import {
   StyledInnerContainer,
   StyledOptionsContainer,
-  StyledSelect,
   StyledButton
 } from "./AppStyles";
+
 
 function App() {
   const [breedChoice, setBreedChoice] = useState("hound");
   const [showOneDog, setShowOneDog] = useState(false);
   const [showManyDogs, setShowManyDogs] = useState(false);
+
+  const handleClick1 = () => {
+    setShowOneDog(true);
+    setShowManyDogs(false);
+  }
+
+  const handleClick2 = () => {
+    setShowManyDogs(true);
+    setShowOneDog(false); 
+  }
 
   return (
     <>
@@ -21,15 +31,12 @@ function App() {
         
         <StyledOptionsContainer>
 
-          <StyledButton>
-          Show me just one dog
-          </StyledButton>
+          <Select setBreedChoice={setBreedChoice}>Show me my favourite breed</Select>
+        
+          <StyledButton onClick={handleClick1}>Show me just one dog</StyledButton>
+          <StyledButton onClick={handleClick2}>Show me all the dogs</StyledButton>  
 
-          <OneDog showOneDog={showOneDog} breedChoice={breedChoice} />
-
-          <StyledSelect>Show me my favourite breed</StyledSelect>
-          
-          <StyledButton>Show me all the dogs</StyledButton>  
+          <OneDog breedChoice={breedChoice} showOneDog={showOneDog} />  
 
         </StyledOptionsContainer>
       
