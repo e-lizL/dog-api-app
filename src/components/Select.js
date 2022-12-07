@@ -1,9 +1,42 @@
 import axios from "axios";
 import { useState, useEffect, useCallback } from "react";
+import { 
+StyledSelect, 
+StyledSelectLabel,
+StyledSelectWrapper } from ".././AppStyles";
 
 const Select =({ setBreedChoice }) => {
+
+  const allBreedsUrl = "https://dog.ceo/api/breeds/list/all";
+  const [allBreedsData, setAllBreedsData] = useState({});
+  const breedsArray = [];
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await axios.get(allBreedsUrl);
+      setAllBreedsData(data.message);
+    }
+    getData();
+  }, []);
+
+  (function pushBreedsArray() {
+    for (let key in allBreedsData) {
+      breedsArray.push(key)
+    }
+  }) ();
+
+
   return (
-    <h3>Show me my favourite breed</h3>
+    <StyledSelectWrapper>
+
+      <StyledSelectLabel>choose a breed:</StyledSelectLabel>
+      
+      <StyledSelect id="select" name="" onChange={(e) => setBreedChoice(e.target.value)}>
+        {breedsArray.map(breed =>
+          <option key={breed} value={breed}>{breed}</option>)}
+      </StyledSelect>
+
+    </StyledSelectWrapper>
   )
 }
 

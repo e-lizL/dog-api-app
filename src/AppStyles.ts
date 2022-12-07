@@ -25,8 +25,6 @@ const StyledOptionsContainer = styled.div`
   } */
 `;
 
-const StyledSelect = styled.select``;
-
 const StyledButton = styled.button`
   border: none;
   border-radius: 12px;
@@ -51,12 +49,22 @@ const StyledSingleImageContainer = styled.div`
 const StyledMultiImageContainer = styled.div`
 `;
 
+const StyledSelect =  styled.select`
+`;
+
+const StyledSelectLabel = styled.label`
+`;
+
+const StyledSelectWrapper = styled.div``;
+
 export {
   StyledHeaderWrapper,
   StyledInnerContainer,
   StyledOptionsContainer,
-  StyledSelect,
   StyledButton, 
   StyledSingleImageContainer,
-  StyledMultiImageContainer
+  StyledMultiImageContainer,
+  StyledSelect, 
+  StyledSelectLabel,
+  StyledSelectWrapper
 };

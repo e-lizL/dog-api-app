@@ -32,7 +32,7 @@ function App() {
         
         <StyledOptionsContainer>
 
-          <Select setBreedChoice={setBreedChoice}>Show me my favourite breed</Select>
+          <Select setBreedChoice={setBreedChoice}/>
         
           <StyledButton onClick={handleClick1}>Show me just one dog</StyledButton>
           <StyledButton onClick={handleClick2}>Show me all the dogs</StyledButton>  
