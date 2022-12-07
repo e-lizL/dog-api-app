@@ -1,5 +1,5 @@
+import { useState, useEffect } from "react";
 import axios from "axios";
-import { useState, useEffect, useCallback } from "react";
 import Header from "./components/Header"
 import OneDog from "./components/OneDog"
 import {
@@ -10,6 +10,9 @@ import {
 } from "./AppStyles";
 
 function App() {
+  const [breedChoice, setBreedChoice] = useState("hound");
+  const [showOneDog, setShowOneDog] = useState(false);
+  const [showManyDogs, setShowManyDogs] = useState(false);
 
   return (
     <>
@@ -18,7 +21,11 @@ function App() {
         
         <StyledOptionsContainer>
 
-          <OneDog />
+          <StyledButton>
+          Show me just one dog
+          </StyledButton>
+
+          <OneDog showOneDog={showOneDog} breedChoice={breedChoice} />
 
           <StyledSelect>Show me my favourite breed</StyledSelect>
           
