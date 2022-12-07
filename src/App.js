@@ -1,45 +1,31 @@
-import header from "./header.svg";
 import axios from "axios";
 import { useState, useEffect, useCallback } from "react";
-
+import Header from "./components/Header"
+import OneDog from "./components/OneDog"
 import {
-  StyledHeaderWrapper,
   StyledInnerContainer,
   StyledOptionsContainer,
   StyledSelect,
-  StyledButton,
-  StyledSingleImageContainer
+  StyledButton
 } from "./AppStyles";
 
 function App() {
-  const randomDogUrl = "https://dog.ceo/api/breeds/image/random";
-  const [randomDog, setRandomDog] = useState("");
-
-  const fetchRequest = useCallback(() => {
-    axios
-      .get(randomDogUrl)
-      .then((res) => setRandomDog(res.data))
-      .catch((error) => console.log(error));
-  }, []);
 
   return (
     <>
-      <StyledHeaderWrapper>
-        <img src={header} alt="I love dogs" />
-      </StyledHeaderWrapper>
+      <Header />
       <StyledInnerContainer>
+        
         <StyledOptionsContainer>
+
+          <OneDog />
+
           <StyledSelect>Show me my favourite breed</StyledSelect>
-          <StyledButton>Show me all the dogs</StyledButton>
-          <StyledButton onClick={fetchRequest}>
-            Show me just one dog
-          </StyledButton>
+          
+          <StyledButton>Show me all the dogs</StyledButton>  
+
         </StyledOptionsContainer>
-        <StyledSingleImageContainer>
-          {randomDog &&
-          <img src={randomDog.message} alt="random dog" width="100" height="150"/>
-          }
-        </StyledSingleImageContainer>
+      
       </StyledInnerContainer>
     </>
   );

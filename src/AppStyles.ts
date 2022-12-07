@@ -17,12 +17,12 @@ const StyledOptionsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 5vw;
-  @media (min-width: 600px){
+  /* @media (min-width: 600px){
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 4vw;
-  }
+  } */
 `;
 
 const StyledSelect = styled.select``;
