@@ -1,6 +1,6 @@
 import axios from "axios";
-import { useState, useEffect, useCallback } from "react";
-import {StyledSingleImageContainer  } from ".././AppStyles";
+import { useState, useEffect } from "react";
+import { StyledSingleImageContainer } from ".././AppStyles";
 
 const OneDog = ({ breedChoice, showOneDog }) => {
 

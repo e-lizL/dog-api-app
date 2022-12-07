@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header"
 import OneDog from "./components/OneDog"
 import Select from "./components/Select"
+import ManyDogs from "./components/ManyDogs"
 import {
   StyledInnerContainer,
   StyledOptionsContainer,
@@ -37,6 +38,7 @@ function App() {
           <StyledButton onClick={handleClick2}>Show me all the dogs</StyledButton>  
 
           <OneDog breedChoice={breedChoice} showOneDog={showOneDog} />  
+          <ManyDogs breedChoice={breedChoice} showManyDogs={showManyDogs} /> 
 
         </StyledOptionsContainer>
       

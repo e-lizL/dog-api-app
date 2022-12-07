@@ -41,11 +41,14 @@ const StyledButton = styled.button`
 `;
 
 const StyledSingleImageContainer = styled.div`
-width: 100px;
-height: 150px;
-margin: 80px auto;
-border: 10px solid #AC902C;
-border-radius: 8px;
+  width: 100px;
+  height: 150px;
+  margin: 80px auto;
+  border: 10px solid #AC902C;
+  border-radius: 8px;
+`;
+
+const StyledMultiImageContainer = styled.div`
 `;
 
 export {
@@ -54,5 +57,6 @@ export {
   StyledOptionsContainer,
   StyledSelect,
   StyledButton, 
-  StyledSingleImageContainer
+  StyledSingleImageContainer,
+  StyledMultiImageContainer
 };
