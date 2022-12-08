@@ -4,8 +4,8 @@ import OneDog from "./components/OneDog"
 import Select from "./components/Select"
 import ManyDogs from "./components/ManyDogs"
 import {
-  StyledInnerContainer,
-  StyledOptionsContainer,
+  InnerContainer,
+  OptionsContainer,
   StyledButton
 } from "./AppStyles";
 
@@ -28,9 +28,9 @@ function App() {
   return (
     <>
       <Header />
-      <StyledInnerContainer>
+      <InnerContainer>
         
-        <StyledOptionsContainer>
+        <OptionsContainer>
 
           <Select setBreedChoice={setBreedChoice}/>
         
@@ -40,9 +40,9 @@ function App() {
           <OneDog breedChoice={breedChoice} showOneDog={showOneDog} />  
           <ManyDogs breedChoice={breedChoice} showManyDogs={showManyDogs} /> 
 
-        </StyledOptionsContainer>
+        </OptionsContainer>
       
-      </StyledInnerContainer>
+      </InnerContainer>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { StyledSingleImageContainer } from ".././AppStyles";
+import { StyledSingleImageWrapper } from ".././AppStyles";
 
 const OneDog = ({ breedChoice, showOneDog }) => {
 
@@ -17,11 +17,11 @@ const OneDog = ({ breedChoice, showOneDog }) => {
 
   return(
     <>
-      <StyledSingleImageContainer>
+      <StyledSingleImageWrapper>
         {showOneDog &&
         <img src={dog} alt="one dog" />
         }
-      </StyledSingleImageContainer>
+      </StyledSingleImageWrapper>
     </>
   )
 }

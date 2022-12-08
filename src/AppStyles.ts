@@ -1,28 +1,41 @@
 import styled from 'styled-components';
 
-const StyledHeaderWrapper = styled.div`
+const HeaderWrapper = styled.div`
   padding: 80px;
   display: flex;
   justify-content: center;
 `;
 
-const StyledInnerContainer = styled.div`
+const InnerContainer = styled.div`
   width: 80%;
   max-width: 900px;
   margin: 0 auto;
+  padding-bottom: 80px;
 `;
 
-const StyledOptionsContainer = styled.div`
+const OptionsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5vw;
-  /* @media (min-width: 600px){
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 4vw;
-  } */
+  gap: 50px;
+`;
+
+const StyledSelectLabel = styled.label`
+  font-size: 1.2rem;
+  padding-left: 10px;
+`;
+
+const StyledSelect =  styled.select`
+  height: 45px;
+  padding: 0 20px;
+  display: flex;
+  font-size: 1.2rem;
+`;
+
+const StyledSelectWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;
 
 const StyledButton = styled.button`
@@ -38,33 +51,40 @@ const StyledButton = styled.button`
   }
 `;
 
-const StyledSingleImageContainer = styled.div`
-  width: 100px;
-  height: 150px;
-  margin: 80px auto;
-  border: 10px solid #AC902C;
-  border-radius: 8px;
+const StyledImagesContainer = styled.div`
+  margin-top: 50px;
+`;
+
+const StyledSingleImageWrapper = styled.div`
+  width: 98%;
+  margin: 0 auto;
+  img {
+    margin: 0 auto;
+  }
 `;
 
 const StyledMultiImageContainer = styled.div`
+  width: 98%;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  img {
+    margin: 0 auto;
+  }
 `;
 
-const StyledSelect =  styled.select`
-`;
-
-const StyledSelectLabel = styled.label`
-`;
-
-const StyledSelectWrapper = styled.div``;
 
 export {
-  StyledHeaderWrapper,
-  StyledInnerContainer,
-  StyledOptionsContainer,
-  StyledButton, 
-  StyledSingleImageContainer,
-  StyledMultiImageContainer,
+  HeaderWrapper,
+  InnerContainer,
+  OptionsContainer,
   StyledSelect, 
   StyledSelectLabel,
-  StyledSelectWrapper
+  StyledSelectWrapper,
+  StyledButton, 
+  StyledImagesContainer,
+  StyledSingleImageWrapper,
+  StyledMultiImageContainer
+  
 };

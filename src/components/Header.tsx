@@ -1,11 +1,11 @@
 import header from ".././header.svg";
-import { StyledHeaderWrapper } from ".././AppStyles";
+import { HeaderWrapper } from ".././AppStyles";
 
 const Header = () => {
   return (
-    <StyledHeaderWrapper>
+    <HeaderWrapper>
       <img src={header} alt="I love dogs" />
-    </StyledHeaderWrapper>
+    </HeaderWrapper>
   );
 };
 
