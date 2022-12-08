@@ -31,15 +31,12 @@ function App() {
       <InnerContainer>
         
         <OptionsContainer>
-
-          <Select setBreedChoice={setBreedChoice}/>
-        
-          <StyledButton onClick={handleClick1}>Show me just one dog</StyledButton>
-          <StyledButton onClick={handleClick2}>Show me all the dogs</StyledButton>  
+          <Select data-test="breed-select" setBreedChoice={setBreedChoice}/>
+          <StyledButton data-test="one-button" onClick={handleClick1}>Show me just one dog</StyledButton>
+          <StyledButton data-test="many-button" onClick={handleClick2}>Show me all the dogs</StyledButton>  
 
           <OneDog breedChoice={breedChoice} showOneDog={showOneDog} />  
           <ManyDogs breedChoice={breedChoice} showManyDogs={showManyDogs} /> 
-
         </OptionsContainer>
       
       </InnerContainer>

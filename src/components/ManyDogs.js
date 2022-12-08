@@ -10,7 +10,8 @@ const ManyDogs = ({ showManyDogs, breedChoice }) => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get(manyDogsUrl);
+      const { data } = await axios.get(manyDogsUrl)
+        .catch(err => console.log(err));
       setDogs(data.message);
     }
     getData();
@@ -20,7 +21,7 @@ const ManyDogs = ({ showManyDogs, breedChoice }) => {
     <>
     <StyledMultiImageContainer>
       {showManyDogs &&
-        dogs.map(url => <img key={url} src={url} alt="all dogs of a breed"/>)
+        dogs.map(url => <img data-test="many-dogs" key={url} src={url} alt="all dogs of a breed"/>)
       }
     </StyledMultiImageContainer>
     </>

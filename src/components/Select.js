@@ -13,7 +13,8 @@ const Select =({ setBreedChoice }) => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get(allBreedsUrl);
+      const { data } = await axios.get(allBreedsUrl)
+        .catch(err => console.log(err));
       setAllBreedsData(data.message);
     }
     getData();

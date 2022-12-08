@@ -9,7 +9,8 @@ const OneDog = ({ breedChoice, showOneDog }) => {
   
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get(singleDogUrl);
+      const { data } = await axios.get(singleDogUrl)
+        .catch(err => console.log(err));
       setDog(data.message);
     }
     getData();
@@ -19,7 +20,7 @@ const OneDog = ({ breedChoice, showOneDog }) => {
     <>
       <StyledSingleImageWrapper>
         {showOneDog &&
-        <img src={dog} alt="one dog" />
+        <img src={dog} data-test="one-dog" alt="one dog" />
         }
       </StyledSingleImageWrapper>
     </>
