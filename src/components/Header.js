@@ -1,5 +1,5 @@
 import header from "./header.svg";
-import { HeaderWrapper } from ".././AppStyles";
+import { HeaderWrapper } from "../AppStyles";
 
 const Header = () => {
   return (
